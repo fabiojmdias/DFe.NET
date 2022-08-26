@@ -8,13 +8,22 @@
 	<!--Todos que iniciam com 4... -->
 	<ItemGroup Condition="$(TargetFramework.StartsWith('net4'))">
 		<Reference Include="System.Windows.Forms.dll" />
-		<Reference Include="Dlls\FastReport.dll" />
-		<Reference Include="Dlls\FastReport.Bars.dll" />
-		<Reference Include="Dlls\FastReport.Editor.dll" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\NFe.Danfe.Base\NFe.Danfe.Base.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="FastReport">
+	    <HintPath>Dlls\FastReport.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FastReport.Bars">
+	    <HintPath>Dlls\FastReport.Bars.dll</HintPath>
+	  </Reference>
+	  <Reference Include="FastReport.Editor">
+	    <HintPath>Dlls\FastReport.Editor.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 	<Import Project="..\Shared.NFe.Danfe\Shared.NFe.Danfe.projitems" Label="Shared" />
